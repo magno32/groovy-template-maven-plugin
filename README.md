@@ -5,6 +5,8 @@ groovy template files, see: [Template Engines](http://docs.groovy-lang.org/lates
 
 ## Usage
 
+See also: [Mojo Documentation](http://magno32.github.io/groovy-template-maven-plugin) 
+
 We are working toward a release and deployment to central.  Until this occurs
 you will need to build and install the plugin locally.
 
