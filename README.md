@@ -1,4 +1,4 @@
-# Groovy-Template Maven Plugin
+# Groovy-Template Maven Plugin [![Build Status](https://travis-ci.org/magno32/groovy-template-maven-plugin.svg?branch=master)](https://travis-ci.org/magno32/groovy-template-maven-plugin)
 
 This plugin allows Maven to generate sources and resources from available
 groovy template files, see: [Template Engines](http://docs.groovy-lang.org/latest/html/documentation/template-engines.html)
