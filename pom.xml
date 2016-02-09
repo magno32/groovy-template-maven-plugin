@@ -6,7 +6,12 @@
 	<artifactId>groovy-template-maven-plugin</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>maven-plugin</packaging>
-	
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
 	<description>
 		This plugin allows for code generation from Groovy template files.
 	</description>
