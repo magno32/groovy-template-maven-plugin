@@ -3,7 +3,7 @@
 
 	<groupId>com.summitsystemsinc.maven</groupId>
 	<artifactId>groovy-template-maven-plugin</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>maven-plugin</packaging>
 	<licenses>
 		<license>
@@ -42,7 +42,7 @@
 		<developerConnection>scm:git:https://github.com/magno32/groovy-template-maven-plugin.git</developerConnection>
 		<connection>scm:git:https://github.com/magno32/groovy-template-maven-plugin.git</connection>
 		<url>https://github.com/magno32/groovy-template-maven-plugin</url>
-	  <tag>groovy-template-maven-plugin-1.0.0</tag>
+	  <tag>HEAD</tag>
   </scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
