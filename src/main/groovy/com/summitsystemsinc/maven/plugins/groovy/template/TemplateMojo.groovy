@@ -1,4 +1,4 @@
-package com.summit.groovy.template.mojo;
+package com.summitsystemsinc.maven.plugins.groovy.template;
 
 import java.io.File;
 import org.apache.maven.plugin.AbstractMojo;
