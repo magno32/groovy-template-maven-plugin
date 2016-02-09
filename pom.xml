@@ -25,7 +25,10 @@
 	<name>Groovy Template :: Maven Plugin</name>
 
 	<url>https://github.com/magno32/groovy-template-maven-plugin</url>
-
+	<scm>
+		<connection>scm:git:https://github.com/magno32/groovy-template-maven-plugin.git</connection>
+		<url>https://github.com/magno32/groovy-template-maven-plugin</url>
+	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -192,6 +195,33 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+			<plugin>
+				<!-- Deploy the web site -->
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.12</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<!-- select the Maven phase in which the plugin will be executed -->
+						<phase>site</phase>
+						<configuration>
+							<!-- Plugin configuration ges here -->
+
+							<server>github</server>
+
+							<!-- The commit message -->
+							<message>Building site for my project</message>
+							<!-- The location where the site is uploaded -->
+							<path>${site.path}</path>
+							<!-- Use merge or override the content -->
+							<merge>true</merge>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<reporting>
@@ -207,7 +237,6 @@
 		<profile>
 			<id>run-its</id>
 			<build>
-
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -239,7 +268,6 @@
 						</executions>
 					</plugin>
 				</plugins>
-
 			</build>
 		</profile>
 	</profiles>

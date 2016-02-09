@@ -17,14 +17,9 @@ specific language governing permissions and limitations
 under the License.
 -->
 <project xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd" xmlns="http://maven.apache.org/DECORATION/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<bannerRight>
-		<name>${project.name}</name>
-		<src>images/maven-logo-black-on-white.png</src>
-		<href>http://maven.apache.org/</href>
-	</bannerRight>
 	<bannerLeft>
-		<src>images/apache-maven-project.png</src>
-		<href>http://www.apache.org/</href>
+		<name>Groovy Template Maven Plugin</name>
+		<href>#</href>
 	</bannerLeft>
 	<skin>
 		<groupId>org.apache.maven.skins</groupId>
@@ -35,6 +30,12 @@ under the License.
 		<fluidoSkin>
 			<topBarEnabled>false</topBarEnabled>
 			<sideBarEnabled>true</sideBarEnabled>
+			
+			<gitHub>
+				<projectId>magno32/groovy-template-maven-plugin</projectId>
+				<ribbonOrientation>right</ribbonOrientation>
+				<ribbonColor>black</ribbonColor>
+			</gitHub>
 		</fluidoSkin>
 	</custom>
 	<body>
