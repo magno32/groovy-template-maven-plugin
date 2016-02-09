@@ -31,6 +31,7 @@
 
 	<url>https://github.com/magno32/groovy-template-maven-plugin</url>
 	<scm>
+		<developerConnection>scm:git:https://github.com/magno32/groovy-template-maven-plugin.git</developerConnection>
 		<connection>scm:git:https://github.com/magno32/groovy-template-maven-plugin.git</connection>
 		<url>https://github.com/magno32/groovy-template-maven-plugin</url>
 	</scm>
