@@ -68,12 +68,12 @@ class TemplateMojo extends AbstractMojo{
     /**
      * Output directory for generated sources.
      */
-	@Parameter(defaultValue="\${project.build.directory}/generated-sources/main", property="srcOutput")
+	@Parameter(defaultValue="\${project.build.directory}/generated-sources/gtemplate", property="srcOutput")
     private File sourcesOutputDirectory;
     /**
      * Output directory for generated test sources.
      */
-	@Parameter(defaultValue="\${project.build.directory}/generated-sources/test", property="testSrcOutput")
+	@Parameter(defaultValue="\${project.build.directory}/generated-test-sources/gtemplate", property="testSrcOutput")
     private File testSourcesOutputDirectory;
     /**
      * Output directory for resources.
