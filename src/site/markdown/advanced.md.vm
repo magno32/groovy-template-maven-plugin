@@ -1,0 +1,131 @@
+<h3>Advanced Usage</h3>
+
+Include the plugin in your project’s `pom`.
+
+```
+<plugins>
+...
+    <plugin>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>${project.artifactId}</artifactId>
+        <version>${project.version}</version>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>generate</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+...
+</plugins>
+```
+
+<h3>Properties</h3>
+
+You can define properties to be injected into the Groovy binding.
+
+Include the plugin in your project’s `pom`.
+
+```
+<plugins>
+...
+    <plugin>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>${project.artifactId}</artifactId>
+        <version>${project.version}</version>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>generate</goal>
+                </goals>
+            </execution>
+        </executions>
+        <configuration>
+            <properties>
+                <foo>bar</foo>
+            </properties>
+        </configuration>
+    </plugin>
+...
+</plugins>
+```
+
+In this instance, `$foo` and `${foo}` will resolve to `bar` 
+inside your generated source files.
+
+<h3>Groovy Properties Files</h3>
+
+You can also use 
+[Groovy Properties Files](http://geekmatt.blogspot.com/2010/09/use-configsluper-instead-of-properites.html) 
+for nested and advanced properties.
+
+Create a file `src/gconfig/config.groovy`.
+
+```
+messages = [
+	'Message #1',
+	'Message #2',
+	'And Hello World.'
+]
+```
+
+Modify the plugin to add this property file to the binding.
+
+```
+<plugins>
+...
+    <plugin>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>${project.artifactId}</artifactId>
+        <version>${project.version}</version>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>generate</goal>
+                </goals>
+            </execution>
+        </executions>
+        <configuration>
+            <properties>
+                <foo>bar</foo>
+            </properties>
+            <propertiesFiles>
+                <file>\${project.basedir}/src/gconfig/config.groovy</file>
+            </propertiesFiles>
+        </configuration>
+    </plugin>
+...
+</plugins>
+```
+
+Along with the variable `foo`, a new variable `messages` will be available to your templates.
+
+You can use `messages` like a Java List object, ex:
+
+```
+//There are ${messages.size()} messages to print.
+<% for(def m : messages) { %>
+    //Printing "$m" to console.
+    System.out.println("$m");
+<% } %>
+		
+System.out.println("Property from pom: foo=$foo");
+```
+
+Once rendered, the source code will look like this:
+
+```
+//There are 3 messages to print.
+		
+//Printing "Message #1" to console.
+System.out.println("Message #1");
+
+//Printing "Message #2" to console.
+System.out.println("Message #2");
+
+//Printing "And Hello World." to console.
+System.out.println("And Hello World.");
+				
+System.out.println("Property from pom: foo=bar");
+```

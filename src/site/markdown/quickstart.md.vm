@@ -1,0 +1,26 @@
+<h2>Quickstart</h2>
+
+Include the plugin in your project’s `pom`:
+
+```
+<plugins>
+...
+    <plugin>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>${project.artifactId}</artifactId>
+        <version>${project.version}</version>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>generate</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
+...
+</plugins>
+```
+
+By default, the plugin will generate sources 
+from `src/main/gtemplate` and `src/test/gtemplate`. 
+The files that are output will reflect the name of the input files.
