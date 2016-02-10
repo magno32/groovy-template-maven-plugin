@@ -32,7 +32,7 @@ under the License.
 			<sideBarEnabled>true</sideBarEnabled>
 			
 			<gitHub>
-				<projectId>magno32/groovy-template-maven-plugin</projectId>
+				<projectId>summitsystemsinc/groovy-template-maven-plugin</projectId>
 				<ribbonOrientation>right</ribbonOrientation>
 				<ribbonColor>black</ribbonColor>
 			</gitHub>

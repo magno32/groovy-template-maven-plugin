@@ -37,11 +37,11 @@
 	
 	<name>Groovy Template :: Maven Plugin</name>
 
-	<url>https://github.com/magno32/groovy-template-maven-plugin</url>
+	<url>https://github.com/summitsystemsinc/groovy-template-maven-plugin</url>
 	<scm>
-		<developerConnection>scm:git:https://github.com/magno32/groovy-template-maven-plugin.git</developerConnection>
-		<connection>scm:git:https://github.com/magno32/groovy-template-maven-plugin.git</connection>
-		<url>https://github.com/magno32/groovy-template-maven-plugin</url>
+		<developerConnection>scm:git:https://github.com/summitsystemsinc/groovy-template-maven-plugin.git</developerConnection>
+		<connection>scm:git:https://github.com/summitsystemsinc/groovy-template-maven-plugin.git</connection>
+		<url>https://github.com/summitsystemsinc/groovy-template-maven-plugin</url>
 		<tag>HEAD</tag>
 	</scm>
 	<properties>
